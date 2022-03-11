@@ -2,9 +2,11 @@
 layout: default
 ---
 
+{% if page.nav_type != "none" %}
 <div class="container text-center mt-5 mb-2">
     {% include nav_skinny.html %}
 </div>
+{% endif %}
 <div class="container">
     {{content}}
 </div>
