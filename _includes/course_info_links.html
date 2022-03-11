@@ -1,0 +1,6 @@
+{% for ilink in site.data.canvas_info_links %}
+<a class="mt-2 btn mt-2 btn-primary mt-2 btn-lg" href="{{site.canvas_url}}/{{site.canvas_id}}/{{ilink[1]}}" role="button" type="button">{{ilink[0]}}</a>
+{% endfor %}
+{% for ilink in site.data.other_info_links %}
+<a class="mt-2 btn mt-2 btn-primary mt-2 btn-lg" href="{{ilink[1] | liquify}}" role="button" type="button">{{ilink[0]}}</a>
+{% endfor %}
