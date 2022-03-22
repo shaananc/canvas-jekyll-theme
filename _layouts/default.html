@@ -14,7 +14,8 @@
         {{ content }}
     </section>
     <footer class="text-center mb-3" style="color:rgba(36, 36, 36,0.7); font-size: small;">
-    {% include footer.md %}
+        {%- capture footer -%}{%- include footer.md -%}{%- endcapture -%}
+        {{- footer | markdownify | replace: " id=", " data-id=" | strip -}}
 </footer>
 </body>
 
