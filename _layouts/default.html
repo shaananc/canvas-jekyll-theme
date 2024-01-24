@@ -53,7 +53,16 @@
         }
 
         .ic-Layout-columns:not(:has(.context_external_tool_1581)) {
-            margin-left: 0px !important;
+
+
+            @media (min-width: 768px) {
+                margin-left: 2rem !important;
+            }
+
+            @media not (min-width: 768px) {
+                margin-left: 0px !important;
+            }
+
         }
 
         #left-side:not(:has(.context_external_tool_1581)) {
