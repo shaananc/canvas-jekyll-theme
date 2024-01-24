@@ -195,14 +195,8 @@ background: repeating-linear-gradient( -45deg, rgba(69,78,247,0.30), rgba(68,76,
       z-index: 10;
   }
 
-  .with-right-side #right-side-wrapper {
+  .with-right-side #right-side-wrapper:not(:has(#course_status)) {
       display: none;
-  }
-
-  .ic-Layout-columns:not(:has(.context_external_tool_1581)) {
-      @media (min-width: 768px) {
-          margin-left: 30px !important;
-      }
   }
 
   #left-side:not(:has(.context_external_tool_1581)) {
