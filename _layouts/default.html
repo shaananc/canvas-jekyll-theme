@@ -52,16 +52,19 @@
             display: none;
         }
 
-        .ic-Layout-columns:not(:has(.context_external_tool_1581)) {
 
-
-            margin-left: 30px !important;
-
-            @media not (min-width: 768px) {
+        @media not (min-width: 768px) {
+            .ic-Layout-columns:not(:has(.context_external_tool_1581)) {
                 margin-left: 0px !important;
             }
-
         }
+
+        @media not (min-width: 768px) {
+            .ic-Layout-columns:not(:has(.context_external_tool_1581)) {
+                margin-left: 30px !important;
+            }
+        }
+
 
         #left-side:not(:has(.context_external_tool_1581)) {
             display: none !important;
