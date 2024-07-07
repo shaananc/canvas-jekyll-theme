@@ -69,6 +69,15 @@ background: repeating-linear-gradient( -45deg, rgba(69,78,247,0.30), rgba(68,76,
 
 #nav-btns > a:visited { color:white !important; }
 
+#nav-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px 5px;
+  margin-top: 10px!important;
+
+}
+
 .white-visited > a:visited { color:white !important; }
 
 .equal {
