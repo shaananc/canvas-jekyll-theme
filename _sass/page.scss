@@ -1,5 +1,9 @@
+$font-family-sans-serif: "Helvetica, Arial, sans-serif" !default;
+$headings-font-weight: 700 !default;
 $link-color: #286dc0;
 $link-hover-color: $link-color !default;
+
+@import "bootstrap/scss/bootstrap";
 
 .name {
     color: blue
@@ -180,6 +184,19 @@ background: repeating-linear-gradient( -45deg, rgba(69,78,247,0.30), rgba(68,76,
 
   .course-title {
       display: none
+  }
+
+  h1[data-id="foundations-of-algorithms"] {
+      display: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-weight: 700;
   }
 
   .ic-sticky-frame {}

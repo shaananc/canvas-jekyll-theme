@@ -2,7 +2,11 @@
 layout: default
 ---
 
-{% if page.nav_type != "none" %}
+{% if page.nav_type == "full" %}
+<div class="fluid-container text-center mb-2">
+    {% include nav_full.html %}
+</div>
+{% elsif page.nav_type == "skinny" %}
 <div class="fluid-container text-center mb-2">
     {% include nav_skinny.html %}
 </div>
