@@ -36,23 +36,76 @@ $link-hover-color: $link-color !default;
 }
 
 .cgrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 1fr;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
+    /* Canvas pages have historically been finicky with CSS grid; prefer flex. */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .rgrid {
-    display: grid;
-    grid-template-rows: 250px 30px 350px 120px;
-    grid-auto-columns: 1fr;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
+    /* Keep intent (grid-like layout) but via flexbox. */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .tutor-bio {
     font-size:medium!important
+}
+
+/* Staff page layout (matches FOA templates; avoid CSS grid). */
+.staff-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    align-items: stretch;
+}
+
+.staff-grid--lead {
+    justify-content: center;
+}
+
+.staff-grid--lead .staff-card--lead {
+    flex: 1 1 520px;
+    max-width: 620px;
+}
+
+.staff-grid--tutors {
+    justify-content: flex-start;
+}
+
+.staff-grid--tutors .staff-card {
+    flex: 1 1 260px;
+    max-width: 340px;
+    margin: 0; /* override Bootstrap spacing utilities used in markup */
+}
+
+.staff-card {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 0.9rem;
+    background: #fff;
+}
+
+.staff-card--tutor.card {
+    /* ensure cards keep their border even if Canvas styles reset it */
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.staff-card--tutor .card-header {
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.staff-card--lead .staff-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.staff-card--lead .work,
+.staff-card--lead .bio,
+.staff-card--lead .consultation {
+    width: 100%;
 }
 
 .table.sched>thead>tr>th {
