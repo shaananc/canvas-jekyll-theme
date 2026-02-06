@@ -80,6 +80,15 @@ $link-hover-color: $link-color !default;
     margin: 0; /* override Bootstrap spacing utilities used in markup */
 }
 
+/* Center the two lead tutors under the lead staff section. */
+.staff-grid--lead-tutors {
+    justify-content: center;
+}
+
+.staff-grid--lead-tutors .staff-card {
+    flex: 0 1 320px;
+}
+
 .staff-card {
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 0.9rem;
