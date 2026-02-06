@@ -65,6 +65,41 @@ $link-hover-color: $link-color !default;
     color: rgb(63,63,63)
 }
 
+.table.sched {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+}
+
+.table.sched td,
+.table.sched tbody th {
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+    line-height: 1.2;
+}
+
+.table.sched thead th {
+    white-space: nowrap;
+    word-break: normal;
+    hyphens: none;
+}
+
+@media (max-width: 768px) {
+    /* Canvas pages do not reliably include Bootstrap's `.table-responsive` wrapper. */
+    .table.sched {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.95rem;
+    }
+
+    .table.sched th,
+    .table.sched td {
+        padding: 0.45rem 0.55rem;
+    }
+}
+
 .sched.break {
     background-color: #e5e5f7;
 opacity: 0.90;
