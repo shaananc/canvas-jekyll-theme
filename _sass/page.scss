@@ -68,7 +68,6 @@ $link-hover-color: $link-color !default;
 .table.sched {
     width: 100%;
     max-width: 100%;
-    table-layout: fixed;
 }
 
 .table.sched td,
@@ -92,6 +91,7 @@ $link-hover-color: $link-color !default;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         font-size: 0.95rem;
+        table-layout: fixed;
     }
 
     .table.sched th,
