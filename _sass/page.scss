@@ -434,3 +434,19 @@ background: repeating-linear-gradient( -45deg, rgba(69,78,247,0.30), rgba(68,76,
   #left-side:not(:has(.context_external_tool_1581)) {
       //display: none !important;
   }
+
+
+/*
+ * Tables
+ *
+ * Canvas dark mode often reduces contrast for Bootstrap's striped tables.
+ * We bump the stripe/hover backgrounds so alternating rows remain legible.
+ */
+.table.table-striped {
+  --bs-table-striped-bg: rgba(148, 163, 184, 0.14);
+}
+
+.table.table-hover,
+.table.table-striped {
+  --bs-table-hover-bg: rgba(56, 189, 248, 0.18);
+}
